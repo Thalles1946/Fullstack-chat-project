@@ -7,5 +7,21 @@ const AuthPage = (props) => {
     props.onAuth({ username: value, secrete: value });
   };
 
-  return <div className="background"></div>;
+  return (
+    <div className="background">
+      <form onSubmit={onSubmit} className="form-card">
+        <div className="form-title">Welcome 👋</div>
+        <div className="form-subtitle">Set a username to get started</div>
+        <div className="auth">
+          <div className="auth-label">Username</div>
+          <input type="text" className="auth-input" name="username" />
+          <button className="auth-button" type="submit">
+            Enter
+          </button>
+        </div>
+      </form>
+    </div>
+  );
 };
+
+export default AuthPage;
